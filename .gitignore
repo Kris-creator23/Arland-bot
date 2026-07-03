@@ -1,0 +1,12 @@
+.env
+
+__pycache__/
+*.pyc
+
+users.json
+
+media/passports/*
+media/receipts/*
+
+!media/passports/.gitkeep
+!media/receipts/.gitkeep

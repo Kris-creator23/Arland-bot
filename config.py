@@ -1,18 +1,12 @@
 from pathlib import Path
 import os
 
-from dotenv import load_dotenv
-
-load_dotenv()
-
-BOT_TOKEN = os.getenv("BOT_TOKEN")
-
-print(BOT_TOKEN)
+BOT_TOKEN = os.environ.get("BOT_TOKEN")
 
 if not BOT_TOKEN:
     raise RuntimeError("BOT_TOKEN not found")
 
-ADMIN_ID = 758010219
+ADMIN_ID = int(os.environ.get("ADMIN_ID"))
 
 BASE_DIR = Path(__file__).parent
 
